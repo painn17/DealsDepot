@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    
+    
+    
+    
+    .home_container{
+       @apply container mx-auto flex flex-col h-full py-8 px-4 my-4 w-2/3
+    }
+    
+    .hr{
+        @apply bg-slate-400 h-1 rounded mx-4
+    }
+
+    .home_container>span{
+        @apply text-3xl mx-auto 
+    }
+
+    .home_container img{
+        @apply cursor-pointer transition ease-in duration-200
+    }
+
+    .home_container img:hover{
+        @apply scale-105
+    }
+
+    .products_grid{
+        @apply flex flex-col gap-2 lg:block sm:hidden text-center
+    }
+
+    .home_container>div{
+        @apply gap-4 flex flex-col px-16 py-6
+    }
+
+    .plate_container{
+        @apply grid grid-cols-6 grid-rows-2 gap-2 
+    }
+
+    .plate img{
+        @apply h-64 w-full
+    }
+
+    .fir-prod{
+        @apply col-span-2
+    }
+
+    .sec-prod{
+        @apply col-span-2 w-full
+    }
+
+    .thir-prod{
+        @apply col-span-2 w-full
+    }
+
+    .four-prod{
+        @apply col-span-2 w-full
+    }
+    .five-prod{
+        @apply col-span-2 w-full
+    }
+    .six-prod{
+        @apply col-span-2 w-full
+    }
+    
+    .carousel__viewport{
+        @apply h-full w-full py-2
+    }
+    .home_container>span{
+        @apply select-none
+    }
+    .main_text{
+        @apply mx-auto text-3xl select-none my-4
+    }
+   
+    .back-button{
+        @apply p-3 font-bold flex flex-row items-center gap-2 transition ease-in duration-200 w-fit
+    }
+    .back-button:hover{
+        @apply text-emerald-400
+    }
+    .vcpg{
+        @apply w-full
+    }
+    .minus, .plus{
+        @apply text-lg cursor-pointer transition duration-200 ease-in
+    }
+    .minus:hover{
+        @apply text-red-400
+    }
+    .plus:hover{
+        @apply text-yellow-400
+    }
+    .star{
+        @apply text-2xl
+    }
+    /* HTML: <div class="loader"></div> */
+.loader {
+    width: 120px;
+    height: 20px;
+    background: 
+      linear-gradient(#25b09b 0 0) left -40px top 0/40px 20px,
+      linear-gradient(#ddd 0 0) center/100% 50%; 
+    background-repeat: no-repeat;
+    animation: l5 0.5s infinite linear;
+  }
+  @keyframes l5 {
+    100% {background-position: right -40px top 0,center}
+  }
+}
+
+*{
+font-family: "Nanum Gothic", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/* .header_container{
+    text-shadow: -2px -2px 3px rgb(44, 44, 43);
+} */
