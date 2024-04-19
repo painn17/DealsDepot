@@ -9,7 +9,7 @@
   </div>
     
   </div>
-  <Footer ></Footer>
+  <Footer  store:store></Footer>
 </template>
 
 <style>

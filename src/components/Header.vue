@@ -8,7 +8,7 @@
                         </span>
             </div>
             <router-link to="/"><img src="/src/assets/DealsDepot.png" class="icon_container header_component" alt="DD" srcset=""></router-link>
-            <router-link to="/about"><span class="header_component">About Us</span></router-link>
+            <router-link to="/about" @click=dflt()><span class="header_component">About Us</span></router-link>
         </header>
 </template>
 
@@ -46,3 +46,11 @@ img:hover{
 }
 
 </style>
+<script setup>
+
+import { useCounterStore } from '/src/script.js'
+const store = useCounterStore()
+function dflt() {
+    store.dflt(store);
+}
+</script>

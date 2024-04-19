@@ -10,7 +10,7 @@ arrow_back
                 <div class="product-info">
                     <div class="category-text flex flex-col items-start gap-2">
                         <p class="product-page-title">{{data.title}}</p>
-                        <p class="text-gray-100 text-sm opacity-80">Brand:{{data.brand}}</p>
+                        <p class="brand">Brand:{{data.brand}}</p>
                         <div class="flex flex-row items-start select-none">
                             <p class="font-bold">Rate: {{ data.rating }} </p>
                             <div class="flex flex-row items-start gap-2 px-2">
@@ -28,7 +28,7 @@ arrow_back
                     <div>
                         <div class="flex flex-row items-center gap-2">
                 <div class="cart">
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 px-1">
                         Compare
                         <span class="material-symbols-outlined">
                             compare_arrows
@@ -37,7 +37,7 @@ arrow_back
                     </div>
                 </div>
                 <div class="cart">
-                    <p>{{ data.price }}$</p>
+                    <p class="px-1">{{ data.price }}$</p>
                     <span class="material-symbols-outlined ">
                     shopping_cart
                     </span>
@@ -79,6 +79,9 @@ arrow_back
     
 </template>
 <style>
+.brand{
+    @apply text-gray-600 text-sm opacity-80
+}
 .carousel-product{
     @apply py-4 w-1/3 mx-auto h-full
 }

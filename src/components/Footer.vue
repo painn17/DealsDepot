@@ -1,7 +1,3 @@
-
-import { RouterLink } from 'vue-router';
-
-import { RouterLink } from 'vue-router';
 <template>
     <footer class="footer_container">
         <div>
@@ -15,11 +11,11 @@ import { RouterLink } from 'vue-router';
                 </span>
             </div>
             <div class="footer_column">
-                <router-link to="/about"><span class="column_header">About Us</span></router-link>
+                <router-link to="/about" @click=dflt()><span class="column_header">About Us</span></router-link>
                 <span class="column_info">
-                    <RouterLink to="/about"><span>Our Story</span></RouterLink>
-                    <RouterLink to="/about"><span>Mission & Vision</span></RouterLink>
-                    <RouterLink to="/about"><span>Meet the Team</span></RouterLink>
+                    <RouterLink to="/about" @click=story() ><span>Our Story</span></RouterLink>
+                    <RouterLink to="/about" @click=mission()><span>Mission & Vision</span></RouterLink>
+                    <RouterLink to="/about" @click=team()><span>Meet the Team</span></RouterLink>
                     <span></span>
                 </span>
             </div>
@@ -72,3 +68,20 @@ import { RouterLink } from 'vue-router';
         @apply border-b border-emerald-400
     }
 </style>
+
+<script setup>
+import { useCounterStore } from '/src/script.js'
+const store = useCounterStore()
+function story() {
+    store.story(store)
+}
+function dflt() {
+    store.dflt(store);
+}
+function mission() {
+    store.mission(store);
+}
+function team() {
+    store.team(store);
+}
+</script>
