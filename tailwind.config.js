@@ -1,14 +1,18 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 
-const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  content: ['./index.html', './src/*.{vue,js,ts,jsx,tsx,css}', 'node_modules/preline/dist/*.js',],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx,css}",
+    "node_modules/preline/dist/*.js",
+    "./node_modules/flowbite/**/*.js",
+  ],
   darkMode: "class",
   theme: {
     screens: {
-      'xs': '475px',
+      xs: "475px",
       ...defaultTheme.screens,
     },
   },
-  plugins: [require('preline/plugin')],
-}
-
+  plugins: [require("preline/plugin"), require("flowbite/plugin")],
+};

@@ -15,6 +15,8 @@
     "@material-tailwind/html": "^2.2.2",
     "@ztrehagem/vue-accordion": "^1.0.0-beta.1",
     "accordion-js": "^3.3.4",
+    "flowbite": "^2.3.0",
+    "flowbite-vue": "^0.1.4",
     "pinia": "^2.1.7",
     "preline": "^2.1.0",
     "primevue": "^3.51.0",

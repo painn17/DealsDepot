@@ -7,6 +7,7 @@ import Contact from './pages/Contact.vue'
 import Error from './pages/Error.vue'
 import CategoryProduct from './pages/CategoryProduct.vue'
 import ProductPage from "./pages/ProductPage.vue";
+import Compare from './pages/Compare.vue'
 const routes = [
     {
     path: '/',
@@ -40,6 +41,10 @@ const routes = [
     {
     path: "/categories/:category/:id",
     component: ProductPage
+    },
+    {
+    path: '/Compare',
+    component: Compare
     },
 ]
 

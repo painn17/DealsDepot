@@ -75,26 +75,22 @@ import {
 } from '@dafcoe/vue-collapsible-panel'
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { useCounterStore } from '/src/script.js'
-const store = useCounterStore()
-
-const test = ref(null)
-
-
+import { scroll_div } from '/src/script.js'
+const scroll = scroll_div()
 
 
 function scrollTo() {
-    if (store.name === 'story') {
+    if (scroll.name === 'story') {
         let anchor = document.querySelector('#story-about')
         anchor.scrollIntoView()
         anchor.click()
     }
-    else if (store.name === 'mission') {
+    else if (scroll.name === 'mission') {
         let anchor = document.querySelector('#mission-about')
         anchor?.scrollIntoView()
         anchor.click()
     }
-    else if (store.name === 'team') {
+    else if (scroll.name === 'team') {
         let anchor = document.querySelector('#team-about')
         anchor?.scrollIntoView()
         anchor.click()
@@ -103,7 +99,7 @@ function scrollTo() {
 
 onMounted(() => {
     scrollTo()
-    store.name = 'default'
+    scroll.name = 'default'
 })
 
 </script>
